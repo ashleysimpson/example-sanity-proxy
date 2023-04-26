@@ -9,7 +9,7 @@ const proxy = async (req, res) => {
   const headers = {}
   const validHeaders = [
     'authorization', 'content-type', 'client-id',
-    'select-record', 'api-version', 'grant_type']
+    'select-record', 'api-version', 'grant_type', 'memsource', 'content-disposition']
   validHeaders.forEach(header => {
     if (req.headers[header]) {
       headers[header] = req.headers[header]
