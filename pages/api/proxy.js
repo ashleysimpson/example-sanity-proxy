@@ -27,6 +27,9 @@ const proxy = async (req, res) => {
   }
 
   let returnStatus = 200
+  
+  console.log(req.path)
+  
   const proxyResponse = await fetch(req.headers['x-url'], proxyRequest)
     .then(res => {
       // returnStatus = res.status
